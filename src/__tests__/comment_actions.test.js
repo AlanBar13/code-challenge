@@ -1,7 +1,7 @@
 import configureStore from 'redux-mock-store'
 import thunk from 'redux-thunk'
 
-import * as commentActions from './comments.action'
+import * as commentActions from '../actions/comments.action'
 import * as types from '../constants/postsConstants'
 
 const middleware = [thunk]

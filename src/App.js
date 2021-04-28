@@ -25,7 +25,7 @@ function App() {
   
   return (
     <div>
-      <h1>Posts</h1>
+      <h1 data-testid="main-title">Posts</h1>
       {/* Conditional rendering loading will be true while there is no reponse from the API */}
       { loading ? 
         <Loader /> : 

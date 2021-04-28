@@ -50,7 +50,7 @@ function Posts({ listItem }) { //Deconstruct props to get listItem; listItem = p
             return comments.map(item => {
                 return (
                     <ListGroup.Item key={item.id}>
-                        <h4>Name: {item.name}</h4>
+                        <h4 data-testid="comment-name">Name: {item.name}</h4>
                         <h5>Email: {item.email}</h5>
                         <p>Body: {item.body}</p>
                     </ListGroup.Item>
@@ -77,7 +77,7 @@ function Posts({ listItem }) { //Deconstruct props to get listItem; listItem = p
     
     return (
         <div>
-            <h1>Title: {listItem.title}</h1>
+            <h1 data-testid="post-title">Title: {listItem.title}</h1>
             <p>Body: {listItem.body}</p>
             <Button onClick={() => postOnClick(listItem.id)}>Comments</Button>
             <div style={visible ? {display: 'block'} : {display: 'none'}}>

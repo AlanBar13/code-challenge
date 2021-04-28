@@ -1,4 +1,4 @@
-import {postListReducer} from './post.reducer'
+import {postListReducer} from '../reducers/post.reducer'
 import * as types from '../constants/postsConstants'
 
 describe('Post Reducer', () => {

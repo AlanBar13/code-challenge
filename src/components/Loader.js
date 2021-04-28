@@ -19,7 +19,7 @@ function Loader() {
                 display: "block"
             }}
         >
-            <span className="sr-only">Loading...</span>
+            <span className="sr-only" data-testid="loader">Loading...</span>
         </Spinner>
     )
 }
