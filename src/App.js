@@ -16,7 +16,7 @@ function App() {
   const dispatch = useDispatch();
   //Gets the data from redux store and desconstruct data to get the variables loading, error, list
   const data = useSelector((state) => state.data);
-  const {loading, error, list} = data;
+  const {loading, list} = data;
 
   //useffect function that will be called when there is a change in the redux store
   useEffect(() => {
