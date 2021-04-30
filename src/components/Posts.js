@@ -19,6 +19,7 @@ function Posts({ listItem }) { //Deconstruct props to get listItem; listItem = p
     const [title, setTitle] = useState("");
     const [email, setEmail] = useState("");
     const [body, setBody] = useState("");
+    const [fetched, setFetched] = useState(false);
 
     const dispatch = useDispatch()
 
@@ -32,8 +33,10 @@ function Posts({ listItem }) { //Deconstruct props to get listItem; listItem = p
         if(visible){
             setVisible(!visible)
         }else {
-            
-            dispatch(getCommentsById(id))
+            if(!fetched) {
+                dispatch(getCommentsById(id))
+                setFetched(true)
+            }
             setVisible(!visible)
         }
     }
